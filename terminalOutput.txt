@@ -1,0 +1,554 @@
+PS C:\Users\Hey_Nerd\Automatic_Dataset_Cleaning_Script> python encode_dataset.py
+Label Classes:
+['Brave' 'Chrome' 'Firefox' 'Unknown' 'WhatsApp' 'YouTube']
+
+Label Distribution:
+Label
+1    8912
+3    1091
+0     488
+4     356
+5     284
+2     175
+Name: count, dtype: int64
+
+Labels encoded successfully
+PS C:\Users\Hey_Nerd\Automatic_Dataset_Cleaning_Script> python balance_dataset.py
+Balanced dataset created
+Label
+3    175
+0    175
+1    175
+2    175
+4    175
+5    175
+Name: count, dtype: int64
+PS C:\Users\Hey_Nerd\Automatic_Dataset_Cleaning_Script> python normalize_dataset.py
+Dataset normalized successfully
+PS C:\Users\Hey_Nerd\Automatic_Dataset_Cleaning_Script> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PS C:\Users\Hey_Nerd\Automatic_Dataset_Cleaning_Script> python train_models.py  
+2026-03-10 01:20:31.173480: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-10 01:20:32.734927: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Dataset Shape: (1050, 76, 1)
+
+==============================
+Training Model: CNN
+==============================
+Fold: 1
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\convolutional\base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+2026-03-10 01:20:33.827794: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 19ms/step
+Fold: 2
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\convolutional\base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 18ms/step
+Fold: 3
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\convolutional\base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+WARNING:tensorflow:5 out of the last 9 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x0000018E8CC8EE80> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+1/4 ━━━━━━━━━━━━━━━━━━━━ 0s 53ms/stepWARNING:tensorflow:6 out of the last 12 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x0000018E8CC8EE80> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 19ms/step
+Fold: 4
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\convolutional\base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 19ms/step
+Fold: 5
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\convolutional\base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 20ms/step
+Fold: 6
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\convolutional\base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 19ms/step
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:1731: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.        
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Fold: 7
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\convolutional\base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 19ms/step
+Fold: 8
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\convolutional\base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 19ms/step
+Fold: 9
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\convolutional\base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 19ms/step
+Fold: 10
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\convolutional\base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 19ms/step
+
+==============================
+Training Model: GRU
+==============================
+Fold: 1
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\rnn\rnn.py:199: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 39ms/step 
+Fold: 2
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\rnn\rnn.py:199: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 40ms/step 
+Fold: 3
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\rnn\rnn.py:199: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 39ms/step 
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:1731: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.        
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Fold: 4
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\rnn\rnn.py:199: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 41ms/step 
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:1731: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.        
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Fold: 5
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\rnn\rnn.py:199: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 40ms/step 
+Fold: 6
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\rnn\rnn.py:199: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 40ms/step 
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:1731: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.        
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Fold: 7
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\rnn\rnn.py:199: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 41ms/step 
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:1731: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.        
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Fold: 8
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\rnn\rnn.py:199: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 39ms/step 
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:1731: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.        
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Fold: 9
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\rnn\rnn.py:199: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 39ms/step 
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:1731: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.        
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Fold: 10
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\rnn\rnn.py:199: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 39ms/step 
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:1731: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.        
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+
+==============================
+Training Model: BiGRU
+==============================
+Fold: 1
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\rnn\bidirectional.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 68ms/step 
+Fold: 2
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\rnn\bidirectional.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 67ms/step 
+
+
+
+Fold: 3
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\rnn\bidirectional.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 72ms/step 
+Fold: 4
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\rnn\bidirectional.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 70ms/step 
+Fold: 5
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\rnn\bidirectional.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 71ms/step 
+Fold: 6
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\rnn\bidirectional.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 74ms/step 
+Fold: 7
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\rnn\bidirectional.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 72ms/step 
+
+
+
+
+Fold: 8
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\rnn\bidirectional.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 69ms/step 
+Fold: 9
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\rnn\bidirectional.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 71ms/step 
+Fold: 10
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\rnn\bidirectional.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 71ms/step 
+
+
+
+==============================
+Training Model: CNN-BiGRU
+==============================
+Fold: 1
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\convolutional\base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 71ms/step 
+Fold: 2
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\convolutional\base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 79ms/step 
+Fold: 3
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\convolutional\base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 71ms/step 
+Fold: 4
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\convolutional\base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 74ms/step 
+Fold: 5
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\convolutional\base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 73ms/step 
+Fold: 6
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\convolutional\base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 73ms/step 
+Fold: 7
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\convolutional\base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 73ms/step 
+Fold: 8
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\convolutional\base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 73ms/step 
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:1731: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.        
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Fold: 9
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\convolutional\base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 71ms/step 
+Fold: 10
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\convolutional\base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 73ms/step 
+
+
+===================================
+FINAL MODEL COMPARISON RESULTS
+===================================
+
+Model: CNN
+Accuracy : 57.71 %
+Precision: 60.06 %
+Recall   : 57.71 %
+F1 Score : 55.04 %
+
+Model: GRU
+Accuracy : 38.86 %
+Precision: 35.24 %
+Recall   : 38.86 %
+F1 Score : 33.53 %
+
+Model: BiGRU
+Accuracy : 50.29 %
+Precision: 49.78 %
+Recall   : 50.29 %
+F1 Score : 47.33 %
+
+Model: CNN-BiGRU
+Accuracy : 53.62 %
+Precision: 56.85 %
+Recall   : 53.62 %
+F1 Score : 50.82 %
+PS C:\Users\Hey_Nerd\Automatic_Dataset_Cleaning_Script> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PS C:\Users\Hey_Nerd\Automatic_Dataset_Cleaning_Script> python train_models.py  
+2026-03-10 01:20:31.173480: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-10 01:20:32.734927: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Dataset Shape: (1050, 76, 1)
+
+==============================
+Training Model: CNN
+==============================
+Fold: 1
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\convolutional\base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+2026-03-10 01:20:33.827794: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 19ms/step
+Fold: 2
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\convolutional\base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 18ms/step
+Fold: 3
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\convolutional\base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+WARNING:tensorflow:5 out of the last 9 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x0000018E8CC8EE80> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+1/4 ━━━━━━━━━━━━━━━━━━━━ 0s 53ms/stepWARNING:tensorflow:6 out of the last 12 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x0000018E8CC8EE80> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 19ms/step
+Fold: 4
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\convolutional\base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 19ms/step
+Fold: 5
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\convolutional\base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 20ms/step
+Fold: 6
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\convolutional\base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 19ms/step
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:1731: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.        
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Fold: 7
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\convolutional\base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 19ms/step
+Fold: 8
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\convolutional\base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 19ms/step
+Fold: 9
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\convolutional\base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 19ms/step
+Fold: 10
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\convolutional\base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 19ms/step
+
+==============================
+Training Model: GRU
+==============================
+Fold: 1
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\rnn\rnn.py:199: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 39ms/step 
+Fold: 2
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\rnn\rnn.py:199: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 40ms/step 
+Fold: 3
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\rnn\rnn.py:199: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 39ms/step 
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:1731: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.        
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Fold: 4
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\rnn\rnn.py:199: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 41ms/step 
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:1731: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.        
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Fold: 5
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\rnn\rnn.py:199: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 40ms/step 
+Fold: 6
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\rnn\rnn.py:199: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 40ms/step 
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:1731: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.        
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Fold: 7
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\rnn\rnn.py:199: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 41ms/step 
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:1731: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.        
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Fold: 8
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\rnn\rnn.py:199: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 39ms/step 
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:1731: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.        
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Fold: 9
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\rnn\rnn.py:199: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 39ms/step 
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:1731: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.        
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Fold: 10
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\rnn\rnn.py:199: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 39ms/step 
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:1731: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.        
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+
+==============================
+Training Model: BiGRU
+==============================
+Fold: 1
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\rnn\bidirectional.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 68ms/step 
+Fold: 2
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\rnn\bidirectional.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 67ms/step 
+Fold: 3
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\rnn\bidirectional.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 72ms/step 
+Fold: 4
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\rnn\bidirectional.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 70ms/step 
+Fold: 5
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\rnn\bidirectional.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 71ms/step 
+Fold: 6
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\rnn\bidirectional.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 74ms/step 
+Fold: 7
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\rnn\bidirectional.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 72ms/step 
+Fold: 8
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\rnn\bidirectional.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 69ms/step 
+Fold: 9
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\rnn\bidirectional.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 71ms/step 
+Fold: 10
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\rnn\bidirectional.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 71ms/step 
+
+==============================
+Training Model: CNN-BiGRU
+==============================
+Fold: 1
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\convolutional\base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 71ms/step 
+Fold: 2
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\convolutional\base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 79ms/step 
+Fold: 3
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\convolutional\base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 71ms/step 
+Fold: 4
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\convolutional\base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 74ms/step 
+Fold: 5
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\convolutional\base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 73ms/step 
+Fold: 6
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\convolutional\base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 73ms/step 
+Fold: 7
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\convolutional\base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 73ms/step 
+Fold: 8
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\convolutional\base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 73ms/step 
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:1731: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.        
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Fold: 9
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\convolutional\base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 71ms/step 
+Fold: 10
+C:\Users\Hey_Nerd\AppData\Roaming\Python\Python313\site-packages\keras\src\layers\convolutional\base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 73ms/step 
+
+
+===================================
+FINAL MODEL COMPARISON RESULTS
+===================================
+
+Model: CNN
+Accuracy : 57.71 %
+Precision: 60.06 %
+Recall   : 57.71 %
+F1 Score : 55.04 %
+
+Model: GRU
+Accuracy : 38.86 %
+Precision: 35.24 %
+Recall   : 38.86 %
+F1 Score : 33.53 %
+
+Model: BiGRU
+Accuracy : 50.29 %
+Precision: 49.78 %
+Recall   : 50.29 %
+F1 Score : 47.33 %
+
+Model: CNN-BiGRU
+Accuracy : 53.62 %
+Precision: 56.85 %
+Recall   : 53.62 %
+F1 Score : 50.82 %
+PS C:\Users\Hey_Nerd\Automatic_Dataset_Cleaning_Script> 
+
+
+
+
+
+
+
+
+
